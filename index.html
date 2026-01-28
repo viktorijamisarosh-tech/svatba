@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Svatební oznámení</title>
+
+  <!-- Romantické fonty -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- DRUHÁ STRÁNKA / SEKCE -->
+<section class="hero-section">
+
+  <img src="zyhero.jpg" alt="Svatební fotografie" class="hero-image">
+
+  <div class="hero-overlay">
+    <h2>Viktoriia & Josef</h2>
+    <p class="subtitle">Do našeho dne zbývá</p>
+
+    <div class="countdown">
+      <div>
+        <span id="days">0</span>
+        <small>dní</small>
+      </div>
+      <div>
+        <span id="hours">0</span>
+        <small>hod</small>
+      </div>
+      <div>
+        <span id="minutes">0</span>
+        <small>min</small>
+      </div>
+      <div>
+        <span id="seconds">0</span>
+        <small>sek</small>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- DATUM VLEVO -->
+  <div class="date">
+    <span>15</span>
+    <span>04</span>
+    <span>26</span>
+  </div>
+
+  <!-- OBSAH -->
+  <div class="content">
+
+    <!-- FOTOGRAFIE -->
+    <img src="zfoto.jpg" alt="Svatební fotografie">
+
+    <!-- TEXT POD FOTOGRAFIÍ -->
+    <div class="names">
+      <p>Viktoriia</p>
+      <span>&</span>
+      <p>Josef</p>
+    </div>
+
+  </div>
+
+</div>
+<script>
+  const weddingDate = new Date("2026-07-10T14:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = weddingDate - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+  }, 1000);
+</script>
+<!-- TŘETÍ STRÁNKA / SEKCE -->
+<section class="story-section">
+
+  <!-- OZDOBNÁ ČÁRA SE SRDCEM -->
+  <div class="divider">
+    <span class="line"></span>
+    <span class="heart">♥</span>
+    <span class="line"></span>
+  </div>
+
+  <!-- TEXT -->
+  <div class="story-text">
+    <p>
+      S radostí vás zveme, abyste s námi sdíleli náš svatební den,
+      plný lásky, smíchu a nezapomenutelných okamžiků.
+    </p>
+  </div>
+
+  <!-- FOTOGRAFIE -->
+  <img src="zyyhero.jpg" alt="Svatební fotografie" class="story-image">
+
+</section>
+<!-- ČTVRTÁ STRÁNKA / SEKCE – KALENDÁŘ -->
+<section class="calendar-section">
+
+  <h2 class="calendar-title">Duben 2026</h2>
+
+  <!-- KALENDÁŘ -->
+  <div class="calendar">
+    <div class="day-name">Po</div>
+    <div class="day-name">Út</div>
+    <div class="day-name">St</div>
+    <div class="day-name">Čt</div>
+    <div class="day-name">Pá</div>
+    <div class="day-name">So</div>
+    <div class="day-name">Ne</div>
+
+    <!-- prázdná pole před 1. dnem -->
+    <div></div><div></div><div></div>
+
+    <!-- dny v měsíci -->
+    <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+    <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
+    <div>11</div><div>12</div><div>13</div><div>14</div>
+    <div class="wedding-day">15</div>
+    <div>16</div><div>17</div><div>18</div><div>19</div>
+    <div>20</div><div>21</div><div>22</div><div>23</div><div>24</div>
+    <div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
+  </div>
+
+  <!-- STEJNÁ ČÁRA SE SRDCEM -->
+  <div class="divider">
+    <span class="line"></span>
+    <span class="heart">♥</span>
+    <span class="line"></span>
+  </div>
+
+  <!-- FOTKA MÍSTA -->
+  <img src="zyyylokace.jpeg" alt="Místo konání" class="location-image">
+
+</section>
+<!-- HARMONOGRAM DNE -->
+<section class="timeline-section">
+
+  <h2 class="timeline-title">Harmonogram</h2>
+
+  <div class="timeline">
+
+    <!-- POLOŽKA 1 -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="zyyyyykostel.jpg" alt="">
+      </div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <span class="time">12:30</span>
+        <span class="event">Kostel</span>
+      </div>
+    </div>
+
+    <!-- POLOŽKA 2 -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="zyyyyyprsteny.jpeg" alt="Ceremonie">
+      </div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <span class="time">16:30</span>
+        <span class="event">Obřad</span>
+      </div>
+    </div>
+
+    <!-- POLOŽKA 3 -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="zyyyyyyhostina.jpg" alt="Restaurace">
+      </div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <span class="time">17:00</span>
+        <span class="event">Hostina</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
